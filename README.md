@@ -1,4 +1,4 @@
-Design-Quotes-Sketch-Plugin
+Sketch Design Quotes
 ===========================
 
 Get random quotes from quotesondesign.com within your Sketch app

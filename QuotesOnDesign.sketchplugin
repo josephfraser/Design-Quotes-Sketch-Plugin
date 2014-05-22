@@ -1,7 +1,6 @@
 // Get a design quote from quotesondesign.com within the Sketch App by @nodesolomon
 // Thanks to Chris Coyer for making the API available
 
-
 // Useful function to get json data from url
 function getJSON (url) {
     var request = NSURLRequest.requestWithURL(NSURL.URLWithString(url));

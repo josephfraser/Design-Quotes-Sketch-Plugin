@@ -1,0 +1,17 @@
+// Get a design quote from quotesondesign.com within the Sketch App by @nodesolomon
+// Thanks to Chris Coyer for making the API available
+
+
+// Useful function to get json data from url
+function getJSON (url) {
+    var request = NSURLRequest.requestWithURL(NSURL.URLWithString(url));
+    var response = NSURLConnection.sendSynchronousRequest_returningResponse_error(request, null, null);
+    return JSON.parse(NSString.alloc().initWithData_encoding(response, NSUTF8StringEncoding));
+}
+
+// Get A Quote
+var QOD = getJSON("http://quotesondesign.com/api/3.0/api-3.0.json");
+
+// Show Quote
+var app = [NSApplication sharedApplication];
+[app displayDialog: QOD.quote withTitle:"Quote by" + " " + QOD.author ]
